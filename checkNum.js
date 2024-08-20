@@ -112,14 +112,14 @@ app.post('/', checkVenomClient, async (req, res) => {
             }
 
             // Introduce a delay before checking the next number
-            await new Promise((resolve) => setTimeout(resolve, 1000)); // 1000ms delay between each check
+            await new Promise((resolve) => setTimeout(resolve, 500)); // 1000ms delay between each check
         }
 
 
      
 
 
-        res.status(200).json({ message: 'success', results });
+        res.status(200).json({ message: 'success', results,status:true });
     } catch (error) {
         console.error('Error processing request:', error.message);
         res.status(500).json({ message: 'Internal server error', error: error.message });

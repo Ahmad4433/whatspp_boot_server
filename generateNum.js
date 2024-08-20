@@ -41,7 +41,7 @@ function generateRandomMobileNumber() {
 
     const networks = Object.keys(networkPrefixes);
 
-    for (let i = 0; i < 500; i++) {
+    for (let i = 0; i < 200; i++) {
         const network = networks[Math.floor(Math.random() * networks.length)];
         const prefixes = networkPrefixes[network];
         const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
